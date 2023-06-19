@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+h1{
+  color:green;
+  
+  
+    }
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.wrapper {
+ 
+  margin-left: 24%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 90px;
+
+  grid-gap: 20px;
+}
+h2{ font-family: 'Courier New', Courier, monospace;
+  
+
+}
+.monstscore{
+  background-color: rgb(132, 132, 153);
+  color: azure;
+  font-weight: bolder;
+  margin-left: 40%;
+  margin-right: 40%;
+  border: 2px solid green;;
+}
+.abha {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.abha:hover {background-color: #3e8e41}
+
+.abah:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.main{
+  border: 2px solid firebrick ;
+  height: 500px;
+
+  background-color: #999;
+
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: turquoise;
+  border-radius: 8px;
+  margin-bottom: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square:hover {
+  transform: scale(1.4);
+}
+
+.square.has-transition {
+  transition: transform 150ms ease-in-out;
+}
+
