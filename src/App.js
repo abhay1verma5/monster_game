@@ -2,10 +2,18 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
-  
+
+
+import ProgressBar from "@ramonak/react-progress-bar";
+
+const delay = ms => new Promise(
+  resolve => setTimeout(resolve, ms)
+);
+
 function App() {
 
- 
+  const [disable,setdisable]=useState('no_button');
+ const[color1,setcolor1]=useState("red")
    const[specialattackenable,setspecialattackenable]=useState(0);
   const [monstscore,setmonstscore]=useState(100);
   const [playerscore,setplayerscore]=useState(100);
@@ -13,6 +21,12 @@ function App() {
   
 const Attack = async event => {
   setmonstscore(monstscore-Math.floor(Math.random()*9))
+  if(specialattackenable>5)
+  {
+    setdisable('abha')
+   
+        
+  }
   setspecialattackenable(specialattackenable+1);
 
   
@@ -40,12 +54,13 @@ const specialattack=()=>{
 
 
 }
-const heal=()=>{
-   
- 
+const heal=async event=>{
   setplayerscore(100);
+  setcolor1('green');
+  await delay(1000);
+ 
   
-
+setcolor1('red');
  
 }
   return (
@@ -53,10 +68,11 @@ const heal=()=>{
 
       <h1>Monster Game</h1>
       <h2>Monster  Score </h2> 
-    <div className='monstscore'> {monstscore}</div>  
+      <ProgressBar className='monstscore2' completed={monstscore} bgColor="red" animateOnRender={true} /> 
       <h2>Player Score  </h2> 
-      <div className='monstscore'> {playerscore}</div>
+      
 
+      <ProgressBar className='monstscore2' completed={playerscore} bgColor={color1} animateOnRender={true} />
       <br></br>
        
 
@@ -66,7 +82,7 @@ const heal=()=>{
           
       onClick={Attack}> Attack</button>
       
-      <button   className='abha' onClick={specialattack}> Special  attack </button>
+      <button   className={disable} onClick={specialattack}> Special Attack </button>
        <br/>
       <button  className='abha' onClick={heal}> Heal  </button> 
       <button  className='abha' onClick={Restart} > Restart  </button> </div>

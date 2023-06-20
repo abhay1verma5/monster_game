@@ -13,8 +13,9 @@
   }
 }
 h1{
-  color:green;
+  color:blue;
   
+  text-shadow: 2px 4px 4px #000000;
   
     }
 .App-header {
@@ -53,13 +54,22 @@ h2{ font-family: 'Courier New', Courier, monospace;
   
 
 }
-.monstscore{
+.monstscore1{
   background-color: rgb(132, 132, 153);
   color: azure;
   font-weight: bolder;
   margin-left: 40%;
   margin-right: 40%;
-  border: 2px solid green;;
+  border: 2px solid green;
+  
+}
+.monstscore2{
+  
+  color: azure;
+  font-weight: bolder;
+  margin-left: 40%;
+  margin-right: 40%;
+ 
 }
 .abha {
   padding: 15px 25px;
@@ -107,5 +117,13 @@ h2{ font-family: 'Courier New', Courier, monospace;
 
 .square.has-transition {
   transition: transform 150ms ease-in-out;
+}
+.no_button{ 
+  
+
+  background-color: #999;
+  
+  
+ 
 }
 
